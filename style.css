@@ -83,6 +83,53 @@ img.hero {
     flex-direction: column;
     text-align: center;
   }
+  /* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.skill-box {
+  background: #f9f9f9;
+  padding: 15px;
+  border-left: 4px solid #003366;
+  border-radius: 8px;
+}
+/* ACHIEVEMENTS */
+.achievements li {
+  margin-bottom: 8px;
+}
+
+/* CARDS */
+.highlight-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.highlight-card {
+  display: flex;
+  gap: 25px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  align-items: center;
+}
+
+.highlight-card iframe,
+.highlight-card img {
+  width: 380px;
+  height: 240px;
+  border-radius: 10px;
+  border: none;
+}
+  .pub-link {
+  color: #003366;
+  font-weight: bold;
+  text-decoration: none;
+}
 
   img.hero, .card img, .card iframe {
     width: 100%;
