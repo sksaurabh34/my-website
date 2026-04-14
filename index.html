@@ -187,7 +187,69 @@ nav a {
   margin: 0;
   color: #003366;
 }
+/* TIMELINE BASE */
+.timeline {
+  margin-top: 20px;
+  position: relative;
+  padding-left: 25px;
+  border-left: 3px solid #003366;
+}
 
+/* CARD */
+.timeline-card {
+  position: relative;
+  background: #f9fbff;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border-left: 5px solid #003366;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* DOT */
+.timeline-card::before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: 18px;
+  width: 12px;
+  height: 12px;
+  background: #003366;
+  border-radius: 50%;
+}
+
+/* SPLIT SECTION */
+.timeline-split {
+  display: flex;
+  gap: 20px;
+}
+
+/* LEFT & RIGHT */
+.timeline-card.left,
+.timeline-card.right {
+  width: 50%;
+}
+
+/* Different accent colors (optional but nice) */
+.timeline-card.left {
+  border-left: 5px solid #003366;
+}
+
+.timeline-card.right {
+  border-left: 5px solid #0077b6;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .timeline-split {
+    flex-direction: column;
+  }
+
+  .timeline-card.left,
+  .timeline-card.right {
+    width: 100%;
+  }
+}
 /* BUTTON */
 .button {
   display: inline-block;
@@ -249,27 +311,38 @@ nav a {
     <li>Velocity-map imaging (VMI)</li>
   </ul>
 
-  <!-- Timeline -->
   <h2>Research Timeline</h2>
 
-  <div class="timeline">
+<div class="timeline">
 
-    <div class="timeline-card">
-      <h3>Postdoctoral Research</h3>
-      <p>Molecule–surface scattering and stereodynamics.</p>
+  <!-- Postdoc -->
+  <div class="timeline-card">
+    <h3>Postdoctoral Research</h3>
+    <p>Molecule–surface scattering and stereodynamics.</p>
+  </div>
+
+  <!-- PhD Split -->
+  <div class="timeline-split">
+
+    <div class="timeline-card left">
+      <h3>PhD — Scientific Research</h3>
+      <p>
+        CO₂ dissociation dynamics on Cu surfaces, reaction probability measurements,
+        vibrational effects, and surface interaction mechanisms.
+      </p>
     </div>
 
-    <div class="timeline-card">
-      <h3>PhD Research</h3>
-      <p>CO₂ dissociation on Cu surfaces and reaction dynamics.</p>
-    </div>
-
-    <div class="timeline-card">
-      <h3>Instrumentation Development</h3>
-      <p>Laser systems, spectroscopy tools, and beam sources.</p>
+    <div class="timeline-card right">
+      <h3>PhD — Instrumentation & Engineering</h3>
+      <p>
+        Design and development of instrumentation, laser spectroscopy systems,
+        laser diagnostic tools, vacuum engineering, and molecular beam source design.
+      </p>
     </div>
 
   </div>
+
+</div>
 
   <a class="button" href="#">Download CV</a>
 
