@@ -76,9 +76,8 @@
 </div>
 
 </body>
-</html> --> -->
+</html> --> 
 !-----------------
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -126,16 +125,21 @@ nav a {
   border-radius: 10px;
 }
 
+h2 {
+  color: #002147;
+  margin-top: 1.5rem;
+}
+
 /* ABOUT */
 .about-flex {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 30px;
 }
 
 .profile-img {
-  width: 170px;
-  height: 170px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #003366;
@@ -143,113 +147,48 @@ nav a {
 }
 
 .about-text {
-  max-width: 600px;
-  line-height: 1.6;
+  max-width: 650px;
+  line-height: 1.7;
 }
 
-/* HIGHLIGHTS */
-.highlights {
-  line-height: 1.8;
+/* EXPERTISE */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
 }
 
-/* TIMELINE (CARD STYLE) */
-.timeline {
-  margin-top: 20px;
-  position: relative;
-  padding-left: 25px;
+.expertise-box {
+  background: #f9fbff;
+  padding: 15px;
+  border-left: 4px solid #003366;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+/* EDUCATION */
+.education {
+  margin-top: 15px;
+}
+
+.edu-item {
+  margin-bottom: 15px;
+  padding-left: 15px;
   border-left: 3px solid #003366;
 }
 
-.timeline-card {
-  position: relative;
-  background: #f9fbff;
-  padding: 15px 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  border-left: 5px solid #003366;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-}
-
-/* dot on line */
-.timeline-card::before {
-  content: "";
-  position: absolute;
-  left: -32px;
-  top: 18px;
-  width: 12px;
-  height: 12px;
-  background: #003366;
-  border-radius: 50%;
-}
-
-/* title */
-.timeline-card h3 {
+.edu-item h3 {
   margin: 0;
   color: #003366;
-}
-/* TIMELINE BASE */
-.timeline {
-  margin-top: 20px;
-  position: relative;
-  padding-left: 25px;
-  border-left: 3px solid #003366;
+  font-size: 1rem;
 }
 
-/* CARD */
-.timeline-card {
-  position: relative;
-  background: #f9fbff;
-  padding: 15px 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  border-left: 5px solid #003366;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+.edu-item p {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
 }
 
-/* DOT */
-.timeline-card::before {
-  content: "";
-  position: absolute;
-  left: -32px;
-  top: 18px;
-  width: 12px;
-  height: 12px;
-  background: #003366;
-  border-radius: 50%;
-}
-
-/* SPLIT SECTION */
-.timeline-split {
-  display: flex;
-  gap: 20px;
-}
-
-/* LEFT & RIGHT */
-.timeline-card.left,
-.timeline-card.right {
-  width: 50%;
-}
-
-/* Different accent colors (optional but nice) */
-.timeline-card.left {
-  border-left: 5px solid #003366;
-}
-
-.timeline-card.right {
-  border-left: 5px solid #0077b6;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .timeline-split {
-    flex-direction: column;
-  }
-
-  .timeline-card.left,
-  .timeline-card.right {
-    width: 100%;
-  }
-}
 /* BUTTON */
 .button {
   display: inline-block;
@@ -291,58 +230,57 @@ nav a {
 
 <div class="container">
 
-  <!-- About Section -->
+  <!-- ABOUT -->
   <div class="about-flex">
     <img src="image/me.jpg" alt="Profile Photo" class="profile-img">
     <div class="about-text">
       <h2>About Me</h2>
       <p>
-        Experimental physicist specialising in surface dynamics, spectroscopy, and precision instrumentation.
-        Strong focus on translating fundamental research into real-world measurement technologies.
+        Experimental physicist specialising in surface dynamics, spectroscopy, and precision instrumentation. 
+        My research focuses on addressing fundamental questions in molecular-level interactions that are often 
+        inaccessible using existing scientific techniques. To overcome these limitations, my research group 
+        develops and applies advanced experimental methods, combining molecular beam scattering, laser 
+        spectroscopy, and high-precision diagnostic tools to explore reaction dynamics at surfaces.
       </p>
     </div>
   </div>
 
-  <!-- Highlights -->
-  <h2>Key Highlights</h2>
-  <ul class="highlights">
-    <li>ppb-level laser stabilization</li>
-    <li>CO₂ dissociation on Cu surfaces</li>
-    <li>Velocity-map imaging (VMI)</li>
-  </ul>
+  <!-- EXPERTISE -->
+  <h2>Areas of Expertise</h2>
 
-  <h2>Research Timeline</h2>
-
-<div class="timeline">
-
-  <!-- Postdoc -->
-  <div class="timeline-card">
-    <h3>Postdoctoral Research</h3>
-    <p>Molecule–surface scattering and stereodynamics.</p>
+  <div class="expertise-grid">
+    <div class="expertise-box">Molecular Beam Surface Scattering</div>
+    <div class="expertise-box">Laser Spectroscopy (REMPI, Diagnostics)</div>
+    <div class="expertise-box">Velocity-Map Imaging (VMI)</div>
+    <div class="expertise-box">Ultra-High Vacuum (UHV) Systems</div>
+    <div class="expertise-box">Instrumentation Development</div>
+    <div class="expertise-box">Laser Stabilisation & Interferometry</div>
+    <div class="expertise-box">Ion Optics & SIMION Modelling</div>
+    <div class="expertise-box">Beam Source Design & Engineering</div>
   </div>
 
-  <!-- PhD Split -->
-  <div class="timeline-split">
+  <!-- EDUCATION & POSITIONS -->
+  <h2>Education & Research Experience</h2>
 
-    <div class="timeline-card left">
-      <h3>PhD — Scientific Research</h3>
+  <div class="education">
+
+    <div class="edu-item">
+      <h3>Postdoctoral Researcher</h3>
       <p>
-        CO₂ dissociation dynamics on Cu surfaces, reaction probability measurements,
-        vibrational effects, and surface interaction mechanisms.
+        Surface reaction dynamics and stereodynamics studies using molecular beam techniques <br>
+        <i>Affiliation: Swansea University, United Kingdom</i>
       </p>
     </div>
 
-    <div class="timeline-card right">
-      <h3>PhD — Instrumentation & Engineering</h3>
+    <div class="edu-item">
+      <h3>PhD — Quantum Controlled Reaction and Collision Dynamics</h3>
       <p>
-        Design and development of instrumentation, laser spectroscopy systems,
-        laser diagnostic tools, vacuum engineering, and molecular beam source design.
+        CO₂ dissociation on Cu surfaces, reaction probability measurements, and vibrational effects <br>
+        <i>Affiliation: Tata Institute of Fundamental Research (TIFR), India</i>
       </p>
     </div>
 
   </div>
-
-</div>
 
   <a class="button" href="#">Download CV</a>
 
@@ -350,4 +288,5 @@ nav a {
 
 </body>
 </html>
+
 
