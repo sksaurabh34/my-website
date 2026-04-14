@@ -73,6 +73,7 @@ img.hero {
 
 .card img, .card iframe {
   width: 440px;
+   height: 280px;
   border-radius: 10px;
 }
 
