@@ -5,13 +5,14 @@
 <title>Research</title>
 
 <style>
-/* FIX OVERFLOW */
+
+/* GENERAL FIX */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* RESEARCH FLEX */
+/* FLEX */
 .research-flex {
   display: flex;
   gap: 2rem;
@@ -22,6 +23,7 @@ img {
 .hero {
   width: 420px;
   border-radius: 10px;
+  cursor: zoom-in;
 }
 
 /* IMPACT BOX */
@@ -54,7 +56,7 @@ img {
 .preview-img {
   width: 350px;
   border-radius: 10px;
-  cursor: pointer;
+  cursor: zoom-in;
   transition: 0.3s;
 }
 
@@ -62,7 +64,37 @@ img {
   transform: scale(1.05);
 }
 
-/* MOBILE FIX */
+/* MODAL ZOOM */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
   .research-flex,
   .highlight-card {
@@ -75,6 +107,7 @@ img {
     width: 100%;
   }
 }
+
 </style>
 
 </head>
@@ -96,7 +129,7 @@ img {
   <h2>Research Overview</h2>
 
   <div class="research-flex">
-    <img src="images/mol_surface_interaction.png" class="hero">
+    <img src="images/mol_surface_interaction.png" class="hero" onclick="openModal(this.src)">
     <div>
       <p>
         My research is divided into two main areas: CO₂ dissociation on metal surfaces
@@ -118,7 +151,7 @@ img {
   <h3>Does CO₂ Dissociate on Low-Index Copper Surfaces?</h3>
 
   <div class="research-flex">
-    <img src="images/Figure_TOC.png" class="hero">
+    <img src="images/Figure_TOC.png" class="hero" onclick="openModal(this.src)">
     <div>
       <p>
         CO₂ dissociation on Cu surfaces under UHV conditions shows strong dependence
@@ -135,11 +168,8 @@ img {
 
   <div class="highlight-grid">
 
-    <!-- WAVEMETER -->
     <div class="highlight-card">
-      <a href="files/wavemeter01.pdf" target="_blank">
-        <img src="images/wavemeter01.png" class="preview-img">
-      </a>
+      <img src="images/wavemeter01.png" class="preview-img" onclick="openModal(this.src)">
       <div>
         <h4>Wavemeter</h4>
         <p>Fizeau interferometer-based high-precision wavelength measurement system.</p>
@@ -147,9 +177,8 @@ img {
       </div>
     </div>
 
-    <!-- LASER -->
     <div class="highlight-card">
-      <img src="images/he_ne_laser.png" class="preview-img">
+      <img src="images/he_ne_laser.png" class="preview-img" onclick="openModal(this.src)">
       <div>
         <h4>Ultra-stable Laser</h4>
         <p>ppb-stabilized He–Ne laser using feedback control electronics.</p>
@@ -157,9 +186,8 @@ img {
       </div>
     </div>
 
-    <!-- INTERFEROMETER -->
     <div class="highlight-card">
-      <img src="images/interferometer.png" class="preview-img">
+      <img src="images/interferometer.png" class="preview-img" onclick="openModal(this.src)">
       <div>
         <h4>Transfer Interferometer</h4>
         <p>MHz-level laser stabilization using interferometric feedback systems.</p>
@@ -167,9 +195,8 @@ img {
       </div>
     </div>
 
-    <!-- SPECTROMETER -->
     <div class="highlight-card">
-      <img src="images/spectrometer.png" class="preview-img">
+      <img src="images/spectrometer.png" class="preview-img" onclick="openModal(this.src)">
       <div>
         <h4>Spectrometer</h4>
         <p>Compact high-resolution spectrometer for wavelength and Raman measurements.</p>
@@ -177,9 +204,8 @@ img {
       </div>
     </div>
 
-    <!-- PHOTOACOUSTIC -->
     <div class="highlight-card">
-      <img src="images/photoacoustic.png" class="preview-img">
+      <img src="images/photoacoustic.png" class="preview-img" onclick="openModal(this.src)">
       <div>
         <h4>Photoacoustic Spectroscopy</h4>
         <p>Ultra-sensitive detection of weak gas-phase transitions.</p>
@@ -187,9 +213,8 @@ img {
       </div>
     </div>
 
-    <!-- IMAGING -->
     <div class="highlight-card">
-      <img src="images/spatial_imaging.png" class="preview-img">
+      <img src="images/spatial_imaging.png" class="preview-img" onclick="openModal(this.src)">
       <div>
         <h4>Imaging Tools</h4>
         <p>Velocity-map and spatial imaging systems for scattering studies.</p>
@@ -197,9 +222,8 @@ img {
       </div>
     </div>
 
-    <!-- HELIUM -->
     <div class="highlight-card">
-      <img src="images/He_source.png" class="preview-img">
+      <img src="images/He_source.png" class="preview-img" onclick="openModal(this.src)">
       <div>
         <h4>Helium Beam Source</h4>
         <p>Compact high-flux beam source for real-time surface monitoring.</p>
@@ -210,6 +234,31 @@ img {
   </div>
 
 </div>
+
+<!-- MODAL -->
+<div id="imgModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+<!-- JS -->
+<script>
+function openModal(src) {
+  document.getElementById("imgModal").style.display = "block";
+  document.getElementById("modalImg").src = src;
+}
+
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("imgModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>
