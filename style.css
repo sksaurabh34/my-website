@@ -52,6 +52,17 @@ img.hero {
   border-radius: 6px;
 }
 
+.preview-img {
+  width: 400px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.preview-img:hover {
+  transform: scale(1.05);
+}
+
 /* CARD */
 .card {
   display: flex;
