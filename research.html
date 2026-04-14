@@ -3,6 +3,80 @@
 <head>
 <link rel="stylesheet" href="style.css">
 <title>Research</title>
+
+<style>
+/* FIX OVERFLOW */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* RESEARCH FLEX */
+.research-flex {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.hero {
+  width: 420px;
+  border-radius: 10px;
+}
+
+/* IMPACT BOX */
+.impact-box {
+  background: #eef4ff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border-left: 5px solid #003366;
+}
+
+/* CARDS */
+.highlight-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.highlight-card {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.preview-img {
+  width: 350px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.preview-img:hover {
+  transform: scale(1.05);
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .research-flex,
+  .highlight-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero,
+  .preview-img {
+    width: 100%;
+  }
+}
+</style>
+
 </head>
 
 <body>
@@ -19,40 +93,123 @@
 
 <div class="container">
 
-<!-- RESEARCH --> <div class="container" id="research"> <h2>Research Overview</h2> 
-  <div class="research-flex"> <img src="image/mol_surface_interaction.png" class="hero"> <div> 
-    <p> My research is divided into CO₂ dissociation on metal surfaces and development of advanced diagnostic tools. </p>
-  </div> </div> <div class="impact-box"> 
-    <h3>Key Research Impact</h3> <ul> <li>Measured CO₂ dissociation probabilities down to 10⁻⁵</li> 
-      <li>Identified energy-dependent surface reaction pathways</li> <li>Developed MHz-level laser stabilization systems</li> 
-      <li>Built compact diagnostic tools for surface science</li> </ul> </div> 
-  <h3>Does CO₂ Dissociate on Low-Index Copper Surfaces?</h3> 
-  <div class="research-flex"> <img src="image/Figure_TOC.png" class="hero"> 
-    <div> <p> CO₂ dissociation on Cu surfaces under UHV conditions with strong dependence 
-      on incident energy, orientation, and vibrational excitation. </p> 
-      <p> <a class="button" href="CO2_publication.pdf">📄 View Publication</a> 
-      </p> </div> </div> <h3>Development of Diagnostic Techniques</h3> 
-  <div class="highlight-grid"> <div class="highlight-card"> 
-    <iframe src="image/wavemeter01.png" width="100%" height="400px"></iframe> <div> <h4>Wavemeter</h4> 
-      <p>Fizeau interferometer-based high-precision wavelength measurement system.</p> 
-      <a class="pub-link" href="#">Publication Link</a> </div> </div> 
-    <div class="highlight-card"> <img src="image/he_ne_laser.png"> <div> <h4>Ultra-stable Laser</h4> <p>ppb-stabilized He–Ne laser using feedback control electronics.</p> 
-      <a class="pub-link" href="#">Publication Link</a> </div> </div>
-    <div class="highlight-card"> <img src="interferometer.png"> 
-      <div> <h4>Transfer Interferometer</h4> 
-        <p>MHz-level laser stabilization using interferometric feedback systems.</p> 
-        <a class="pub-link" href="#">Publication Link</a> </div> </div> <div class="highlight-card"> 
-          <img src="image/spectrometer.png"> <div> <h4>Spectrometer</h4> <p>Compact high-resolution spectrometer for wavelength and Raman measurements.</p> 
-            <a class="pub-link" href="#">Publication Link</a> </div> </div>
-    <div class="highlight-card"> 
-              <img src="photoacoustic.png">
-              <div> <h4>Photoacoustic Spectroscopy</h4> <p>Ultra-sensitive detection of weak gas-phase transitions.</p>
-                <a class="pub-link" href="#">Publication Link</a> </div> </div>
-    <div class="highlight-card"> 
-      <img src="image/spatial_imaging.png"> <div> <h4>Imaging Tools</h4> <p>Velocity-map and spatial imaging systems for scattering studies.</p>
-        <a class="pub-link" href="#">Publication Link</a> </div> </div> <div class="highlight-card"> 
-          <img src="image/He_source.png"> <div> <h4>Helium Beam Source</h4> 
-            <p>Compact high-flux beam source for surface monitoring.</p> 
-            <a class="pub-link" href="#">Publication Link</a> </div> </div> </div> </div>
+  <h2>Research Overview</h2>
+
+  <div class="research-flex">
+    <img src="images/mol_surface_interaction.png" class="hero">
+    <div>
+      <p>
+        My research is divided into two main areas: CO₂ dissociation on metal surfaces
+        and the development of advanced diagnostic tools for high-precision measurements.
+      </p>
+    </div>
+  </div>
+
+  <div class="impact-box">
+    <h3>Key Research Impact</h3>
+    <ul>
+      <li>Measured CO₂ dissociation probabilities down to 10⁻⁵</li>
+      <li>Identified energy-dependent surface reaction pathways</li>
+      <li>Developed MHz-level laser stabilization systems</li>
+      <li>Built compact diagnostic tools for surface science</li>
+    </ul>
+  </div>
+
+  <h3>Does CO₂ Dissociate on Low-Index Copper Surfaces?</h3>
+
+  <div class="research-flex">
+    <img src="images/Figure_TOC.png" class="hero">
+    <div>
+      <p>
+        CO₂ dissociation on Cu surfaces under UHV conditions shows strong dependence
+        on incident energy, molecular orientation, and vibrational excitation.
+      </p>
+
+      <a class="button" href="files/CO2_publication.pdf" target="_blank">
+        📄 View Publication
+      </a>
+    </div>
+  </div>
+
+  <h3>Development of Diagnostic Techniques</h3>
+
+  <div class="highlight-grid">
+
+    <!-- WAVEMETER -->
+    <div class="highlight-card">
+      <a href="files/wavemeter01.pdf" target="_blank">
+        <img src="images/wavemeter01.png" class="preview-img">
+      </a>
+      <div>
+        <h4>Wavemeter</h4>
+        <p>Fizeau interferometer-based high-precision wavelength measurement system.</p>
+        <a class="pub-link" href="#">Publication Link</a>
+      </div>
+    </div>
+
+    <!-- LASER -->
+    <div class="highlight-card">
+      <img src="images/he_ne_laser.png" class="preview-img">
+      <div>
+        <h4>Ultra-stable Laser</h4>
+        <p>ppb-stabilized He–Ne laser using feedback control electronics.</p>
+        <a class="pub-link" href="#">Publication Link</a>
+      </div>
+    </div>
+
+    <!-- INTERFEROMETER -->
+    <div class="highlight-card">
+      <img src="images/interferometer.png" class="preview-img">
+      <div>
+        <h4>Transfer Interferometer</h4>
+        <p>MHz-level laser stabilization using interferometric feedback systems.</p>
+        <a class="pub-link" href="#">Publication Link</a>
+      </div>
+    </div>
+
+    <!-- SPECTROMETER -->
+    <div class="highlight-card">
+      <img src="images/spectrometer.png" class="preview-img">
+      <div>
+        <h4>Spectrometer</h4>
+        <p>Compact high-resolution spectrometer for wavelength and Raman measurements.</p>
+        <a class="pub-link" href="#">Publication Link</a>
+      </div>
+    </div>
+
+    <!-- PHOTOACOUSTIC -->
+    <div class="highlight-card">
+      <img src="images/photoacoustic.png" class="preview-img">
+      <div>
+        <h4>Photoacoustic Spectroscopy</h4>
+        <p>Ultra-sensitive detection of weak gas-phase transitions.</p>
+        <a class="pub-link" href="#">Publication Link</a>
+      </div>
+    </div>
+
+    <!-- IMAGING -->
+    <div class="highlight-card">
+      <img src="images/spatial_imaging.png" class="preview-img">
+      <div>
+        <h4>Imaging Tools</h4>
+        <p>Velocity-map and spatial imaging systems for scattering studies.</p>
+        <a class="pub-link" href="#">Publication Link</a>
+      </div>
+    </div>
+
+    <!-- HELIUM -->
+    <div class="highlight-card">
+      <img src="images/He_source.png" class="preview-img">
+      <div>
+        <h4>Helium Beam Source</h4>
+        <p>Compact high-flux beam source for real-time surface monitoring.</p>
+        <a class="pub-link" href="#">Publication Link</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
 </body>
 </html>
