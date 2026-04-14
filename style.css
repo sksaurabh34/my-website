@@ -83,6 +83,14 @@ img.hero {
     flex-direction: column;
     text-align: center;
   }
+  /* IMPACT */
+.impact-box {
+  background: #eef4ff;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 5px solid #003366;
+  margin-top: 20px;
+}
   /* SKILLS */
 .skills-grid {
   display: grid;
