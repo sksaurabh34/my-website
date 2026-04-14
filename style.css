@@ -139,6 +139,33 @@ img.hero {
   text-decoration: none;
 }
 
+  .timeline {
+  border-left: 3px solid #003366;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #003366;
+  position: absolute;
+  left: -26px;
+  top: 5px;
+  border-radius: 50%;
+}
+
+.timeline-item h4 {
+  margin: 0;
+  color: #002147;
+}
   img.hero, .card img, .card iframe {
     width: 100%;
   }
