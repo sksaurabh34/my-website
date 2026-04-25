@@ -1,176 +1,215 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saurabh Kumar Singh</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saurabh Kumar Singh</title>
 
-<style>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #222;
+    }
 
-/* GLOBAL */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f4f4f4;
-}
+    header {
+      background: #002147;
+      color: white;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
 
-/* HEADER */
-header {
-  background: #002147;
-  color: white;
-  padding: 2rem;
-  text-align: center;
-}
+    header h1 {
+      margin-bottom: 0.5rem;
+    }
 
-/* NAV */
-nav {
-  background: #003366;
-  text-align: center;
-  padding: 1rem;
-}
+    header p {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
 
-nav a {
-  color: white;
-  margin: 0 1rem;
-  text-decoration: none;
-  font-weight: bold;
-}
+    nav {
+      background: #003366;
+      text-align: center;
+      padding: 1rem;
+    }
 
-/* CONTAINER */
-.container {
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: white;
-  border-radius: 10px;
-}
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-h2 {
-  color: #002147;
-  margin-top: 1.5rem;
-}
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-/* ABOUT */
-.about-flex {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
 
-.profile-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #003366;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
+    h2 {
+      color: #002147;
+      margin-top: 1.8rem;
+      margin-bottom: 1rem;
+    }
 
-.about-text {
-  flex: 1;
-  line-height: 1.7;
-  text-align: justify;   /* makes it look clean and aligned */
-}
+    .about-flex {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
 
-/* EXPERTISE */
-.expertise-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-  margin-top: 15px;
-}
+    .profile-img {
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #003366;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      flex-shrink: 0;
+    }
 
-.expertise-box {
-  background: #f9fbff;
-  padding: 15px;
-  border-left: 4px solid #003366;
-  border-radius: 8px;
-  font-size: 0.95rem;
-}
+    .about-text {
+      flex: 1;
+      line-height: 1.7;
+    }
 
-/* EDUCATION */
-.education {
-  margin-top: 15px;
-}
+    .social-links {
+      margin-top: 18px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
 
-.edu-item {
-  margin-bottom: 15px;
-  padding-left: 15px;
-  border-left: 3px solid #003366;
-}
+    .social-links a {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eef3ff;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
 
-.edu-item h3 {
-  margin: 0;
-  color: #003366;
-  font-size: 1rem;
-}
+    .social-links svg {
+      width: 22px;
+      height: 22px;
+      fill: #003366;
+    }
 
-.edu-item p {
-  margin: 4px 0 0;
-  font-size: 0.95rem;
-}
+    .social-links a:hover {
+      background: #003366;
+    }
 
-/* BUTTON */
-.button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 18px;
-  background: #003366;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-}
-.social-links {
-  margin-top: 15px;
-  display: flex;
-  gap: 15px;
-}
+    .social-links a:hover svg {
+      fill: white;
+    }
 
-/* icon style */
-.social-links a {
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eef3ff;
-  border-radius: 8px;
-  transition: 0.3s;
-}
+    .highlight-box {
+      background: #eef4ff;
+      padding: 18px;
+      border-radius: 10px;
+      margin-top: 24px;
+      border-left: 5px solid #003366;
+    }
 
-/* svg inside */
-.social-links svg {
-  width: 22px;
-  height: 22px;
-  fill: #003366;
-}
+    .highlight-box ul {
+      margin: 0;
+      padding-left: 20px;
+    }
 
-/* hover effect */
-.social-links a:hover {
-  background: #003366;
-}
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
 
-.social-links a:hover svg {
-  fill: white;
-}
-/* MOBILE */
-@media (max-width: 768px) {
-  .about-flex {
-    flex-direction: column;
-    text-align: center;
-  }
-}
+    .expertise-box {
+      background: #f9fbff;
+      padding: 15px;
+      border-left: 4px solid #003366;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
 
-</style>
+    .timeline {
+      margin-top: 15px;
+    }
+
+    .timeline-item {
+      margin-bottom: 18px;
+      padding-left: 15px;
+      border-left: 3px solid #003366;
+    }
+
+    .timeline-item h3 {
+      margin: 0;
+      color: #003366;
+      font-size: 1rem;
+    }
+
+    .timeline-item p {
+      margin: 6px 0 0;
+      font-size: 0.96rem;
+      line-height: 1.6;
+    }
+
+    .button-row {
+      margin-top: 25px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 18px;
+      background: #003366;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .button:hover {
+      background: #00509e;
+    }
+
+    @media (max-width: 768px) {
+      .about-flex {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-text {
+        text-align: left;
+      }
+
+      .button-row {
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Saurabh Kumar Singh </h1>
+  <h1>Saurabh Kumar Singh</h1>
   <p>
-   Atomic and molecular beams • Molecule-surface collisions • Optics & Photonics •  Laser spectroscopy 
+    Experimental Physicist • Atomic and Molecular Beams • Surface Dynamics • Laser Spectroscopy • Precision Instrumentation
   </p>
 </header>
 
@@ -184,88 +223,94 @@ h2 {
 
 <div class="container">
 
-  <!-- ABOUT -->
   <div class="about-flex">
-    <img src="image/me.jpg" alt="Profile Photo" class="profile-img">
+    <img src="images/me.jpg" alt="Portrait of Saurabh Kumar Singh" class="profile-img">
+
     <div class="about-text">
       <h2>About Me</h2>
       <p>
-        Experimental physicist specialising in surface dynamics, spectroscopy, and precision instrumentation. 
-        My research focuses on addressing fundamental questions in molecular-level interactions that are often 
-        inaccessible using existing scientific techniques. To overcome these limitations, my research group 
-        develops and applies advanced experimental methods, combining molecular beam scattering, laser 
-        spectroscopy, and high-precision diagnostic tools to explore reaction dynamics at surfaces.
+        I am an experimental physicist working at the interface of atomic and molecular beam science, gas--surface dynamics, laser spectroscopy, and precision instrumentation. My research combines fundamental studies of molecule--surface interactions with the development of advanced experimental tools, including compact beam sources, interferometric laser diagnostics, ion-optical detection systems, and ultra-high-vacuum instrumentation.
       </p>
+      <p>
+        I am currently a Postdoctoral Research Assistant at Swansea University, where I work on helium scattering, beam-source development, and precision diagnostics for surface and beam experiments. My broader interests include beam manipulation, state control, laser-frequency diagnostics, and the design of compact high-performance experimental systems.
+      </p>
+
+      <div class="social-links">
+        <a href="[scholar.google.co.uk](https://scholar.google.co.uk/citations?user=Nq0FKUcAAAAJ&hl=en&authuser=1)" target="_blank" rel="noopener noreferrer" title="Google Scholar">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2L1 9l11 7 9-5.73V17h2V9L12 2zm0 18c-4.41 0-8-1.79-8-4v-2.08l8 5.08 8-5.08V16c0 2.21-3.59 4-8 4z"/>
+          </svg>
+        </a>
+
+        <a href="[researchgate.net](https://www.researchgate.net/profile/Saurabh_Singh22?ev=hdr_xprf)" target="_blank" rel="noopener noreferrer" title="ResearchGate">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19.59 7.41C18.17 6 16.2 5 14 5H5v14h3v-4h5l3 4h3l-3.59-4.79C18.38 13.21 20 11.42 20 9c0-.55-.09-1.08-.41-1.59zM8 11V8h6c1.1 0 2 .9 2 2s-.9 1-2 1H8z"/>
+          </svg>
+        </a>
+
+        <a href="[linkedin.com](https://www.linkedin.com/in/saurabh-kumar-singh-18326a157)" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 3A2 2 0 0121 5V19a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zm-9 14V10H7v7h3zm-1.5-8.2c.97 0 1.75-.8 1.75-1.8S9.47 5.2 8.5 5.2 6.75 6 6.75 7s.78 1.8 1.75 1.8zM17 17v-3.5c0-2-1.07-2.9-2.5-2.9-1.15 0-1.67.63-1.95 1.07V10h-3v7h3v-3.9c0-1.03.2-2.02 1.47-2.02 1.25 0 1.27 1.17 1.27 2.1V17h2.71z"/>
+          </svg>
+        </a>
+
+        <a href="[orcid.org](https://orcid.org/0000-0002-2760-9671)" target="_blank" rel="noopener noreferrer" title="ORCID">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-3 15H7V9h2v8zm-1-9.1c-.69 0-1.25-.56-1.25-1.25S7.31 5.4 8 5.4s1.25.56 1.25 1.25S8.69 7.9 8 7.9zM17 17h-2.15l-1.74-2.91h-.02V17H11V9h3.4c1.72 0 3.1 1.39 3.1 3.1 0 1.46-.98 2.69-2.32 3.03L17 17z"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 
-  <div class="social-links">
+  <div class="highlight-box">
+    <h2>Current Focus</h2>
+    <ul>
+      <li>Development of compact high-flux, low-divergence atomic and molecular beam sources.</li>
+      <li>Helium scattering, molecular beam diagnostics, and beam manipulation using magnetic fields.</li>
+      <li>Precision laser diagnostics including interferometric wavemeters and frequency-stabilisation tools.</li>
+      <li>Custom experimental systems for gas--surface dynamics, spectroscopy, and ultra-high-vacuum studies.</li>
+    </ul>
+  </div>
 
-  <!-- Google Scholar -->
-  <a href="https://scholar.google.co.uk/citations?user=Nq0FKUcAAAAJ&hl=en&authuser=1" target="_blank" title="Google Scholar">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 2L1 9l11 7 9-5.73V17h2V9L12 2zm0 18c-4.41 0-8-1.79-8-4v-2.08l8 5.08 8-5.08V16c0 2.21-3.59 4-8 4z"/>
-    </svg>
-  </a>
-
-  <!-- ResearchGate -->
-  <a href="https://www.researchgate.net/profile/Saurabh_Singh22?ev=hdr_xprf" target="_blank" title="ResearchGate">
-    <svg viewBox="0 0 24 24">
-      <path d="M19.59 7.41C18.17 6 16.2 5 14 5H5v14h3v-4h5l3 4h3l-3.59-4.79C18.38 13.21 20 11.42 20 9c0-.55-.09-1.08-.41-1.59zM8 11V8h6c1.1 0 2 .9 2 2s-.9 1-2 1H8z"/>
-    </svg>
-  </a>
-
-  <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/aurabh-kumar-singh-18326a157" target="_blank" title="LinkedIn">
-    <svg viewBox="0 0 24 24">
-      <path d="M19 3A2 2 0 0121 5V19a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zm-9 14V10H7v7h3zm-1.5-8.2c.97 0 1.75-.8 1.75-1.8S9.47 5.2 8.5 5.2 6.75 6 6.75 7s.78 1.8 1.75 1.8zM17 17v-3.5c0-2-1.07-2.9-2.5-2.9-1.15 0-1.67.63-1.95 1.07V10h-3v7h3v-3.9c0-1.03.2-2.02 1.47-2.02 1.25 0 1.27 1.17 1.27 2.1V17h2.71z"/>
-    </svg>
-  </a>
-
-</div>
-  
-  <!-- EXPERTISE -->
   <h2>Areas of Expertise</h2>
 
   <div class="expertise-grid">
-    <div class="expertise-box">Molecular Beam Surface Scattering</div>
-    <div class="expertise-box">Laser Spectroscopy (REMPI, Diagnostics)</div>
-    <div class="expertise-box">Velocity-Map Imaging (VMI)</div>
-    <div class="expertise-box">Ultra-High Vacuum (UHV) Systems</div>
-    <div class="expertise-box">Instrumentation Development</div>
-    <div class="expertise-box">Laser Stabilisation & Interferometry</div>
-    <div class="expertise-box">Ion Optics & SIMION Modelling</div>
-    <div class="expertise-box">Beam Source Design & Engineering</div>
+    <div class="expertise-box">Atomic and Molecular Beam Experiments</div>
+    <div class="expertise-box">Gas--Surface Scattering and Surface Dynamics</div>
+    <div class="expertise-box">Laser Spectroscopy and Precision Diagnostics</div>
+    <div class="expertise-box">Interferometry and Laser Frequency Stabilisation</div>
+    <div class="expertise-box">Velocity-Map Imaging and Ion Optics</div>
+    <div class="expertise-box">Ultra-High Vacuum Instrumentation</div>
+    <div class="expertise-box">Beam Source Design, CAD, and MolFlow+ Modelling</div>
+    <div class="expertise-box">Scientific Instrument Development and Automation</div>
   </div>
 
-  <!-- EDUCATION & POSITIONS -->
-  <h2>Education & Research Experience</h2>
+  <h2>Research Experience</h2>
 
-  <div class="education">
-
-    <div class="edu-item">
-      <h3>Postdoctoral Researcher</h3>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>Postdoctoral Research Assistant — Swansea University, United Kingdom</h3>
       <p>
-        Surface reaction dynamics and stereodynamics studies using molecular beam techniques <br>
-        <i>Affiliation: Swansea University, United Kingdom</i>
+        Working on helium scattering, compact beam-source development, and precision diagnostics for gas--surface and beam experiments. Current work includes beam manipulation using magnetic fields, source optimisation using CAD and MolFlow+, and diagnostic development for ultra-high-vacuum systems.
       </p>
     </div>
 
-    <div class="edu-item">
-      <h3>PhD — Quantum Controlled Reaction and Collision Dynamics</h3>
+    <div class="timeline-item">
+      <h3>Ph.D. Researcher — Tata Institute of Fundamental Research (TIFR), India</h3>
       <p>
-        CO₂ dissociation on Cu surfaces, reaction probability measurements, and vibrational effects <br>
-        <i>Affiliation: Tata Institute of Fundamental Research (TIFR), India</i>
+        Investigated CO₂ dissociation on Cu surfaces using molecular beam methods and developed advanced diagnostic instrumentation including interferometric wavemeters, ion-imaging tools, TOF mass spectrometers, and compact beam sources for state-resolved scattering experiments.
       </p>
     </div>
-
   </div>
 
-  <a class="button" href="#">Download CV</a>
+  <div class="button-row">
+    <a class="button" href="research.html">Explore Research</a>
+    <a class="button" href="publications.html">View Publications</a>
+    <a class="button" href="files/Saurabh_Kumar_Singh_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+  </div>
 
 </div>
 
 </body>
 </html>
-
-
