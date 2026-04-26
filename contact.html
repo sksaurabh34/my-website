@@ -9,10 +9,17 @@
   <style>
     .contact-card {
       background: #ffffff;
-      border-radius: 10px;
-      padding: 24px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
       line-height: 1.7;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .contact-card h2 {
+      margin-top: 0;
+      color: #003366;
     }
 
     .contact-card p {
@@ -25,32 +32,55 @@
     }
 
     .contact-links {
-      margin-top: 20px;
+      margin-top: 22px;
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
     }
 
     .contact-links a {
-      display: inline-block;
-      padding: 10px 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 15px;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 8px;
       background: #003366;
-      color: white;
+      color: #ffffff;
       font-weight: 600;
+      font-size: 14px;
+      transition: 0.25s ease;
     }
 
     .contact-links a:hover {
       background: #00509e;
+      transform: translateY(-2px);
     }
 
     .contact-note {
-      margin-top: 24px;
+      margin-top: 26px;
       background: #eef4ff;
-      padding: 16px;
+      padding: 16px 18px;
       border-left: 5px solid #003366;
       border-radius: 8px;
+    }
+
+    .icon {
+      font-size: 17px;
+    }
+
+    @media (max-width: 600px) {
+      .contact-card {
+        padding: 20px;
+      }
+
+      .contact-links {
+        flex-direction: column;
+      }
+
+      .contact-links a {
+        width: fit-content;
+      }
     }
   </style>
 </head>
@@ -78,24 +108,38 @@
     <p><strong>Location:</strong> Swansea, United Kingdom</p>
     <p><strong>Email:</strong> <a href="mailto:s.k.singh@swansea.ac.uk">s.k.singh@swansea.ac.uk</a></p>
     <p><strong>Alternate Email:</strong> <a href="mailto:saurabhbhu342556@gmail.com">saurabhbhu342556@gmail.com</a></p>
-    <p><strong>ORCID:</strong> <a href="https://orcid.org/0000-0002-2760-9671" target="_blank" rel="noopener noreferrer">0000-0002-2760-9671</a></p>
+    <p><strong>ORCID:</strong> 
+      <a href="https://orcid.org/0000-0002-2760-9671" target="_blank" rel="noopener noreferrer">
+        0000-0002-2760-9671
+      </a>
+    </p>
 
     <div class="contact-links">
-      <a href="https://orcid.org/0000-0002-2760-9671" target="_blank" rel="noopener noreferrer">ORCID</a>
+      <a href="https://orcid.org/0000-0002-2760-9671" target="_blank" rel="noopener noreferrer">
+        <span class="icon">🟢</span> ORCID
+      </a>
 
-      <a href="https://scholar.google.co.uk/citations?user=Nq0FKUcAAAAJ&hl=en&authuser=1" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      <a href="https://scholar.google.co.uk/citations?user=Nq0FKUcAAAAJ&hl=en&authuser=1" target="_blank" rel="noopener noreferrer">
+        <span class="icon">🎓</span> Google Scholar
+      </a>
 
-      <a href="https://www.researchgate.net/profile/Saurabh_Singh22/research" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+      <a href="https://www.researchgate.net/profile/Saurabh_Singh22/research" target="_blank" rel="noopener noreferrer">
+        <span class="icon">🔬</span> ResearchGate
+      </a>
 
-      <a href="https://www.linkedin.com/in/saurabh-kumar-singh-18326a157" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/saurabh-kumar-singh-18326a157" target="_blank" rel="noopener noreferrer">
+        <span class="icon">💼</span> LinkedIn
+      </a>
 
-      <a href="files/CV_Saurabh.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+      <a href="files/CV_Saurabh.pdf" target="_blank" rel="noopener noreferrer">
+        <span class="icon">📄</span> Download CV
+      </a>
     </div>
 
     <div class="contact-note">
       <p>
         I am open to opportunities in experimental physics, atomic and molecular beam science,
-        scientific instrumentation, optics and photonics, and advanced measurement technologies.
+        scientific instrumentation, optics and photonics, laser diagnostics, and advanced measurement technologies.
       </p>
     </div>
   </div>
