@@ -1,14 +1,60 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="style.css">
-<title>Contact</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Saurabh Kumar Singh</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .contact-card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 24px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      line-height: 1.7;
+    }
+
+    .contact-card p {
+      margin: 10px 0;
+    }
+
+    .contact-links {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .contact-links a {
+      display: inline-block;
+      padding: 10px 14px;
+      text-decoration: none;
+      border-radius: 6px;
+      background: #003366;
+      color: white;
+      font-weight: 600;
+    }
+
+    .contact-links a:hover {
+      background: #00509e;
+    }
+
+    .contact-note {
+      margin-top: 24px;
+      background: #eef4ff;
+      padding: 16px;
+      border-left: 5px solid #003366;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 
 <body>
 
-<header><h1>Contact</h1></header>
+<header>
+  <h1>Contact</h1>
+</header>
 
 <nav>
   <a href="index.html">Home</a>
@@ -20,13 +66,30 @@
 
 <div class="container" id="contact">
 
-  <p>Email: s.k.singh@swansea.ac.uk</p>
-  <p><a href="https://orcid.org/0000-0002-2760-9671" target="_blank">ORCID Profile</a></p>
+  <div class="contact-card">
+    <h2>Get in Touch</h2>
 
-  <p>
-    Open to opportunities in R&D, scientific instrumentation, optics & photonics, 
-    and advanced measurement technologies.
-  </p>
+    <p><strong>Name:</strong> Saurabh Kumar Singh</p>
+    <p><strong>Location:</strong> Swansea, United Kingdom</p>
+    <p><strong>Email:</strong> <a href="mailto:s.k.singh@swansea.ac.uk">s.k.singh@swansea.ac.uk</a></p>
+    <p><strong>Alternate Email:</strong> <a href="mailto:saurabhbhu342556@gmail.com">saurabhbhu342556@gmail.com</a></p>
+    <p><strong>ORCID:</strong> <a href="[orcid.org](https://orcid.org/0000-0002-2760-9671)" target="_blank" rel="noopener noreferrer">0000-0002-2760-9671</a></p>
+
+    <div class="contact-links">
+      <a href="[orcid.org](https://orcid.org/0000-0002-2760-9671)" target="_blank" rel="noopener noreferrer">ORCID</a>
+      <a href="[scholar.google.co.uk](https://scholar.google.co.uk/citations?user=Nq0FKUcAAAAJ&hl=en&authuser=1)" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      <a href="[researchgate.net](https://www.researchgate.net/profile/Saurabh_Singh22)" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+      <a href="[linkedin.com](https://www.linkedin.com/in/saurabh-kumar-singh-18326a157)" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="files/Saurabh_Kumar_Singh_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+    </div>
+
+    <div class="contact-note">
+      <p>
+        I am open to opportunities in experimental physics, atomic and molecular beam science, scientific instrumentation, optics and photonics, and advanced measurement technologies.
+      </p>
+    </div>
+  </div>
+
 </div>
 
 </body>
